@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to login familytree account</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+        }
+
+        body{
+            background:#f0f4ff;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+        }
+
+        .card{
+            width:340px;
+            background:#fff;
+            padding:35px;
+            border-radius:12px;
+            border:1px solid #d8dff5;
+            box-shadow:0 10px 25px rgba(0,0,0,.08);
+        }
+
+        h2{
+            text-align:center;
+            color:#234;
+            margin-bottom:10px;
+        }
+
+        p{
+            text-align:center;
+            color:#666;
+            margin-bottom:25px;
+            font-size:14px;
+        }
+
+        label{
+            display:block;
+            margin-bottom:6px;
+            color:#555;
+            font-size:14px;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:8px;
+            margin-bottom:18px;
+            font-size:14px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            border:none;
+            border-radius:8px;
+            background:#4a6cf7;
+            color:#fff;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#3558e6;
+        }
+
+        .message{
+            display:none;
+            margin-top:18px;
+            padding:12px;
+            border-radius:8px;
+            background:#eef4ff;
+            color:#234;
+            font-size:14px;
+            text-align:center;
+        }
+
+        .support{
+            text-align:center;
+            margin-top:18px;
+        }
+
+        .support a{
+            text-decoration:none;
+            color:#4a6cf7;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+
+    <h2>Welcome Back</h2>
+    <p>Sign in to your account</p>
+
+    <form onsubmit="return showMessage();">
+
+        <label>Username</label>
+        <input type="text" required>
+
+        <label>Password</label>
+        <input type="password" required>
+
+        <button type="submit">Log In</button>
+
+    </form>
+
+    <div class="message" id="msg">
+        This is a demo login page. No authentication is performed.
+    </div>
+
+    <div class="support">
+        <a href="https://aclogportal.net/">Need Help?</a>
+    </div>
+
+</div>
+
+<script>
+function showMessage(){
+    document.getElementById("msg").style.display="block";
+    return false;
+}
+</script>
+
+</body>
+</html>
